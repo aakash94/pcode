@@ -128,6 +128,10 @@ class D1(GuiGen):
             # break
         return generated_codes
 
+    def get_code_from_image_path(self, image_path: str) -> str:
+        image = cv2.imread(image_path)
+        return self.generate_code(img=image)
+
 
 def main():
     print("D1")
